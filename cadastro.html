@@ -5,9 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link rel="stylesheet" href="style_cadastro.css">
-    
 </head>
+
 <body>
-    
+
+    <header>
+        <h1> FAÇA O SEU CADASTRO </h1>
+    </header>
+
+<main>
+    <nav>
+        <a href="todos_produtos.html"><h3>Todos os produtos</h3></a> 
+        <a href="receitas.html"><h3>Receitas</h3></a>
+        <a href="Colheita_do_mês.html"><h3>Colheita do mês</h3></a>
+        <a href="Cestinha.html"><h3>Cestinha</h3></a>
+    </nav>
+
+    <form>
+        <br>
+        <br>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome"  required>
+
+        <label for="sobrenome">Sobrenome:</label>
+        <input type="text" id="sobrenome" name="sobrenome" required>
+
+        <br>
+        <br>
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf" required>
+
+        <label for="data_nascimento">Data de Nascimento (DD/MM/AAAA):</label>
+        <input type="date" id="data_nascimento" name="data_nascimento" required>
+        
+        <br>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <br>
+        <br>
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required>
+
+        <label for="confirmar_senha">Senha (Confirme):</label>
+        <input type="password" id="confirmar_senha" name="confirmar_senha" required>
+
+        <br>
+        <br>
+        <input type="checkbox" id="promocoes" name="promocoes">
+        <label for="promocoes"> Quero receber novidades e promoções por e-mail </label>
+        <br>
+        <br>
+        <button type="submit">Criar usuário</button>
+    </form>
+
+    <section>
+        <br>
+        <h3>TUDO PRONTO!</h3>
+        <h4> Após criado o usário clique no botão abaixo e você será redirecionado para a página de login</h4>
+        <nav>
+            <br>
+            <a href="login.html"><button>Clique aqui</button> </a>
+        </nav>
+    </section>
+
+</main>
+
 </body>
 </html>

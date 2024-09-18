@@ -21,7 +21,6 @@ header h1 {
     color: rgb(7, 120, 18); /* Altera a cor do texto para branco, para se destacar */
     font-size: 2.5em; /* Aumenta o tamanho da fonte do título */
     background: none; /* Remove qualquer fundo aplicado ao texto */
-    opacity: 1; /* Garante que o texto não fique opaco */
 }
 
 main{
@@ -31,7 +30,13 @@ main{
 }
 
 nav a {
-    display: inline-block;
+    display: inline-block;/* Mostra os link um na frente do outro */
     margin: 0 15px; /* Espaçamento horizontal entre os links */
     color: rgb(101, 81, 43);
+}
+
+button {
+    color: white;
+    background-color: rgb(101, 81, 43);
+    padding: 8px 15px; /* Aumenta o espaço dentro do botão */
 }
