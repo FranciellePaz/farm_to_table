@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(253, 233, 197);
+}
+
+header {
+    background-image: url('imagem/cabecalho.jpg'); /* Substitua pelo caminho correto da sua imagem */
+    background-size: cover; /* Garante que a imagem cubra todo o espaço disponível */
+    background-position: center; /* Centraliza a imagem */
+    height: 25vh; /* Define a altura do cabeçalho para 25% da altura da tela */
+    width: 100vw; /* Define a largura para 100% da tela */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    text-align: center;
+}
+
+header h1 {
+    color: rgb(7, 120, 18); /* Altera a cor do texto para branco, para se destacar */
+    font-size: 2.5em; /* Aumenta o tamanho da fonte do título */
+    background: none; /* Remove qualquer fundo aplicado ao texto */
+}
+
+nav {
+    text-align: center; /* Centraliza o texto horizontalmente dentro do nav */
+}
+
+nav a {
+    display: inline-block;/* Mostra os link um na frente do outro */
+    margin: 0 15px; /* Espaçamento horizontal entre os links */
+    color: rgb(101, 81, 43);
+}
+section{
+    text-align: center;
+    align-items: center;
+   
+}
+div{
+    display: inline-block;
+    width: 30vw; /* Define a largura para 30% da tela */
+}
+
+div img{
+    margin-bottom: 10px;
+    width: 100%; /* Garante que a imagem ocupe toda a largura da div */
+    
+}
+
+button{
+
+    cursor: pointer;
+   
+    color: white;
+    background-color: rgb(101, 81, 43);
+    font-size: 1.5em;
+    padding: 8px 15px; /* Aumenta o espaço dentro do botão */
+}
+
+div button{
+    margin-top: 0;
+}
