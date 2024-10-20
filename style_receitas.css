@@ -22,10 +22,8 @@ header h1 {
     background: none; /* Remove qualquer fundo aplicado ao texto */
 }
 
-main{
-    
+main{  
     text-align: center; /* Centraliza o texto horizontalmente dentro do div */
-    
 }
 
 nav a {
@@ -34,12 +32,24 @@ nav a {
     color: rgb(101, 81, 43);
 }
 
+div{
+    display: inline-block;
+    width: 30vw; 
+}
+
+div img{
+    margin-bottom: 10px;
+    width: 100%; /* Garante que a imagem ocupe toda a largura da div */
+}
+
 h2 {
     color :brown;
 }
 
 button {
+    cursor: pointer;
     color: white;
     background-color: rgb(101, 81, 43);
+    font-size: 1.5em;
     padding: 8px 15px; /* Aumenta o espaço dentro do botão */
 }
