@@ -1,0 +1,175 @@
+/* INICIO DO RESET CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(253, 233, 197);
+    font-family: 'Roboto', sans-serif;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* FIM DO RESET CSS */
+
+
+
+
+
+
+
+
+
+header {
+    background-image: url('imagem/cabecalho.jpg'); /* Substitua pelo caminho correto da sua imagem */
+    background-size: cover; /* Garante que a imagem cubra todo o espaço disponível */
+    background-position: center; /* Centraliza a imagem */
+    height: 25vh; /* Define a altura do cabeçalho para 20% da altura da tela */
+    width: 100vw; /* Define a largura para 100% da tela */
+    display: flex;
+    /* justify-content: center; Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    text-align: center;
+
+
+    justify-content: space-between;
+    padding: 0 1em;
+}
+
+
+header h1 {
+    color: rgb(7, 120, 18); /* Altera a cor do texto para branco, para se destacar */
+    font-size: 2.5em; /* Aumenta o tamanho da fonte do título */
+    background: none; /* Remove qualquer fundo aplicado ao texto */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header h1 span { 
+    color: rgb(102, 102, 255); 
+    background: 0;
+    font-size: .5em;
+}
+
+header .conten-login {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: 0;
+}
+
+header .conten-login a {
+    text-decoration: none;
+    background: 0;
+    font-weight: 600;
+}
+
+main{
+    
+    text-align: center; /* Centraliza o texto horizontalmente dentro do div */
+    
+}
+
+nav a {
+    display: inline-block;/* Mostra os link um na frente do outro */
+    margin: 0 15px; /* Espaçamento horizontal entre os links */
+    color: rgb(101, 81, 43);
+}
+
+button {
+    color: white;
+    background-color: rgb(101, 81, 43);
+    padding: 8px 15px; /* Aumenta o espaço dentro do botão */
+}
+
+.product-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 6em 0;
+    gap: 1em;
+}
+
+.product {
+    text-align: center;       /* Centraliza o texto abaixo da imagem */
+    margin: 10px;            /* Adiciona um espaço entre os produtos */
+}
+
+.product img {
+    border-radius: 15px; /* Arredonda as bordas da imagem */
+    transition: transform 0.3s; /* Adiciona uma transição suave */
+}
+
+.product img:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente a imagem ao passar o mouse */
+}
+
+footer {
+    position: absolute;
+    bottom: 1em;
+    width: 100%;
+    position: absolute;
+    bottom: 1em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+footer a {
+    /* flex: 1; */
+}
+
+footer a img {
+    width: 45px;
+    height: 45px;
+}
+
