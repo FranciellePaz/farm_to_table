@@ -33,7 +33,7 @@
                     mais tradicionais até os mais 
                     exóticos
                 </p>
-                <button type="button">Saiba mais</button>
+                <button class="modal-btn" type="button" data-modal="primeira_receita">Saiba mais</button>
                 <br>
             </div>
 
@@ -46,7 +46,7 @@
                     receita pela nossa farinha especial,
                     tornando-o muito mais saudável
                 </p>
-                <button type="button">Saiba mais</button>
+                <button class="modal-btn" type="button" data-modal="segunda_receita">Saiba mais</button>
                 <br>
             </div>
 
@@ -59,13 +59,119 @@
                     com carne ou até mesmo uma receita 
                     100% vegana e vegetariana
                 </p>
-                <button type="button">Saiba mais</button>
+                <button class="modal-btn" type="button" data-modal="terceira_receita">Saiba mais</button>
                 <br>
             </div>
 
         </section>
 
     </main>
+
+    <div id="primeira_receita" class="modal">
+        <div class="modal-content">
+            <span class="close">
+                &times;
+            </span> 
+            <h3><strong> Ingredientes</strong> </h3>
+            <p>4 xícaras de água</p>
+            <p>2 tabletes de caldo de galinha</p>
+            <p>3 colheres de sopa de manteiga</p>
+            <p>1 xícara de arroz </p>
+            <p>2 tabletes de caldo de galinha</p>
+            <p>2 colheres de sopa de linhaça</p>
+            <p>1 pitada de açafrão</p>
+            <p>1 cenoura em cubos</p>
+            <p>1 xícara de chá de brócolis aferventado</p>
+            <p>1 caixinha de creme de leite</p>
+            <br>
+            <h3>Modo de fazer</h3>
+            <p>Em uma panela, coloque a água e leve ao fogo.</p>
+            <p>Quando iniciar fervura, dissolva o Caldo e mantenha-o em fogo baixo, enquanto prepara o risoto.</p>
+            <p>Em outra panela, derreta 2 colheres (sopa) de manteiga e refogue o arroz e a linhaça.</p>
+            <p>Junte o açafrão, a cenoura e, aos poucos, vá despejando o caldo quente, mexendo o risoto até terminar todo o Caldo.</p>
+            <p>Quando o arroz estiver al dente e úmido, retire do fogo, junte a manteiga restante, o brócolis e o NESTLÉ Creme de Leite Levíssimo.</p>
+            <p>Sirva a seguir.</p>
+        </div>
+    </div>
     
+    <div id="segunda_receita" class="modal">
+        <div class="modal-content">
+            <span class="close">
+                &times;
+            </span> 
+            <h3><strong> Ingredientes</strong> </h3>
+            <p>1 xícara de farinha de arroz (130 gramas)</p>
+            <p>1/2 xícara de polvilho doce (60 gramas)</p>
+            <p>1/2 xícara de aveia em flocos sem glúten (55 gramas)</p>
+            <p>1/2 colher de chá de sal (2,5 gramas)</p>
+            <p>1/2 colher de chá rasa de goma xantana</p>
+            <p>1 colher de sopa de açúcar mascavo (12 gramas)</p>
+            <p>1 colher de sopa de fermento biológico instantâneo (12 gramas)</p>
+            <p>2 colheres de sopa de azeite (30 ml)</p>
+            <p>1 xícara de água morna (240 ml)</p>
+            <br>
+            <h3>Modo de fazer</h3>
+            <p>Misture todos os secos em uma bacia</p>
+            <p>Derrame o azeite por cima dos secos e vá adicionando a água aos poucos, mexendo com uma colher de pau.</p>
+            <p>Transfira a massa para uma forma untada e polvilhada com farinha de arroz utilizando uma espátula. A minha forma mede 22 cm de comprimento, 6 cm de altura e 8 cm de largura, se estiver usando uma forma maior dobre a receita, mas mantenha a mesma quantidade de fermento.</p>
+            <p>Como a massa é muito grudenta o truque para espalhá-la de maneira uniforme é utilizando uma colher molhada. Use as costas da colher para nivelar a massa.</p>
+            <p>Deixe crescer em um local quentinho, eu gosto de colocar no micro-ondas desligado junto com uma xícara de água quente. O pão vai crescer e dobrar de volume em aproximadamente 30 minutos, quando passar 15 minutos do tempo de crescimento preaqueça o forno à 200º C.</p>
+            <p>Após dobrar de volume (+/- 30 minutos) leve o pão para assar por aproximadamente 25 minutos ou até que ele esteja dourado, com cheirinho de pão fresco saindo do forno.</p>
+            <p>Deixe esfriar por completo antes de cortar o pão vegano rápido, eu sei que é irresistível quando o pão está fresco, mas se não esfriar antes de cortar ele fica um pouco abatumado.</p>
+            <p>Sirva com seu acompanhamento preferido.</p>
+        </div>
+    </div>
+
+    <div id="terceira_receita" class="modal">
+        <div class="modal-content">
+            <span class="close">
+                &times;
+            </span> 
+            <h3><strong> Ingredientes</strong> </h3>
+            <p>100g My Fast Blend Tradicional</p>
+            <p>1unid Berinjela média</p>
+            <p>¼ unid  Dente de alho</p>
+            <p>1cl sopa Azeite de oliva</p>
+            <p>Ervas frescas a gosto (salsa, cebolinha, hortelã,...)</p>
+            <p>Sal a gosto</p>
+            <p>Pimenta do reino a gosto</p>
+            <br>
+            <h3>Modo de fazer</h3>
+            <p>Assar a berinjela em forno por 25 minutos.</p>
+            <p>Picar as ervas com o alho muito bem, juntamente com a berinjela assada.</p>
+            <p>Em uma tigela, misturar com o My Fast, azeite, sal e pimenta.</p>
+            <p>Formatar os hambúrguers e grelhar.</p>
+        </div>
+    </div>
+
+    <script>
+        const buttons = document.querySelectorAll('.modal-btn');
+        const modals = document.querySelectorAll('.modal');
+        const closeBtns = document.querySelectorAll('.close');
+
+        buttons.forEach(button => {
+            button.onclick = function() {
+                const modalId = button.getAttribute('data-modal');
+                const modal = document.getElementById(modalId);
+                modal.style.display = 'block';
+            };
+        });
+
+        closeBtns.forEach(closeBtn => {
+            closeBtn.onclick = function() {
+                const modal = closeBtn.closest('.modal');
+                modal.style.display = 'none';
+            };
+        });
+
+        window.onclick = function(event) {
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        };
+    </script>
+
 </body>
 </html>
