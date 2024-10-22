@@ -32,16 +32,18 @@ nav a {
     margin: 0 15px; /* Espaçamento horizontal entre os links */
     color: rgb(101, 81, 43);
 }
-section{
-    text-align: center;
-    align-items: center;
-   
+section {
+    display: flex; /* Use flexbox para alinhar os filhos */
+    justify-content: center; /* Centraliza os filhos horizontalmente */
+    align-items: center; /* Alinha os filhos verticalmente, se necessário */
+    gap: 20px; /* Espaço entre os itens */
 }
-div{
-    display: inline-block;
-    width: 30vw; /* Define a largura para 30% da tela */
+div {
+    display: flex; /* Permite centralizar o conteúdo interno */
+    flex-direction: column; /* Alinha os itens verticalmente */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    width: auto; /* Permite que a largura se ajuste ao conteúdo */
 }
-
 div img{
     margin-bottom: 10px;
     width: 100%; /* Garante que a imagem ocupe toda a largura da div */
