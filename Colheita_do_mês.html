@@ -4,48 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./colheita_do_mês.css">
-    <title>Página de login</title>
+    <title>Colheita do mês</title>
 </head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">VERDURAS</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <table>
-              <tr>
-              <td><img src="imagem/VERDURAS.png"   alt="variedade de verduras"></td>    
-              <td>
-                  <ul>
-                      <li><strong> Alho-poró:</strong>  Rico em vitamina A, vitamina K e ferro</li>
-                      <li><strong>Brócolis: </strong>Boa fonte de cálcio de origem vegetal</li>
-                      <li><strong>Couve: </strong>Fonte importante de fibras, ferro e cálcio</li>
-                  </ul>
-              </td>    
-              
-              </tr>
-          </table>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">FECHAR</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-<script>
-    function abremodal(){
-         var myModal = new bootstrap.Modal(staticBackdrop);
-         myModal.show(); 
-    } 
-</script>
 
 <body>
 
@@ -67,22 +30,100 @@
             <div>
                 <br>
                 <img src="imagem/LEGUMES.png"   alt="variedade de legumes" width=250 height=200>
-                <button>LEGUMES </button>
+                <button class="modal-btn" type="button" data-modal="legumes">LEGUMES</button>
             </div>
 
             <div>
                 <br>
                 <img src="imagem/VERDURAS.png" alt="variedade de verduras" width=250 height=200>
-                <button onclick="abremodal()">VERDURAS</button>
+                <button class="modal-btn" type="button" data-modal="verduras">VERDURAS</button>
             </div>
 
             <div>
                 <br>
-                <img src="imagem/frutas.png" alt="variedade de verduras" width=250 height=200>
-                <button>FRUTAS</button>
+                <img src="imagem/frutas.png" alt="variedade de frutas" width=250 height=200>
+                <button class="modal-btn" type="button" data-modal="frutas">FRUTAS</button>
             </div>
         
         </section>
     </main>
+
+    <div id="legumes" class="modal">
+        <div class="modal-content">
+            <span class="close">
+                &times;
+            </span> 
+            <h3><strong>Cenoura: </strong> </h3>
+            <p>Possui alto valor nutritivo, sendo uma das melhores fontes de vitamina A.</p>
+            <br>
+            <h3><strong>Pimentão: </strong> </h3>
+            <p>Repleto de vitamina E, carotenoides e betacaroteno.  É fonte de vitaminas B, potássio, fósforo, magnésio e cálcio, ácidos graxos insaturados e flavonoides</p>
+            <br>
+            <h3><strong>Batata: </strong> </h3>
+            <p>É rico em vitamina C, vitamina B6, potássio e fibras dietéticas</p>
+        </div>
+    </div>
+    
+    <div id="verduras" class="modal">
+        <div class="modal-content">
+            <span class="close">
+                &times;
+            </span> 
+            <h3><strong>Alho-poró:</strong> </h3>
+            <p>Rico em vitamina A, vitamina K e ferro</p>
+            <br>
+            <h3><strong>Brócolis:</strong> </h3>
+            <p>Boa fonte de cálcio de origem vegetal</p>
+            <br>
+            <h3><strong>Couve:</strong> </h3>
+            <p>Fonte importante de fibras, ferro e cálcio</p>
+        </div>
+    </div>
+
+    <div id="frutas" class="modal">
+        <div class="modal-content">
+            <span class="close">
+                &times;
+            </span> 
+            <h3><strong>Banana:</strong> </h3>
+            <p>É rica em nutrientes, como fibras, vitaminas, minerais e carboidratos</p>
+            <br>
+            <h3><strong>Uva:</strong> </h3>
+            <p>Auxilia no controle da pressão arterial, tem baixo índice glicêmico, é capaz de controlar o colesterol ruim.</p>
+            <br>
+            <h3><strong>Pera:</strong> </h3>
+            <p>Rica em vitamina A, E, C, fibras, potássio, magnésio e cálcio</p>
+        </div>
+    </div>
+
+    <script>
+        const buttons = document.querySelectorAll('.modal-btn');
+        const modals = document.querySelectorAll('.modal');
+        const closeBtns = document.querySelectorAll('.close');
+
+        buttons.forEach(button => {
+            button.onclick = function() {
+                const modalId = button.getAttribute('data-modal');
+                const modal = document.getElementById(modalId);
+                modal.style.display = 'block';
+            };
+        });
+
+        closeBtns.forEach(closeBtn => {
+            closeBtn.onclick = function() {
+                const modal = closeBtn.closest('.modal');
+                modal.style.display = 'none';
+            };
+        });
+
+        window.onclick = function(event) {
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        };
+    </script>
+
 </body>
 </html>
