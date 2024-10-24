@@ -5,6 +5,34 @@
     background-color: rgb(253, 233, 197);
 }
 
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    header {
+        height: 35vh; /* Aumenta a altura do cabeçalho em telas menores */
+    }
+    
+    header h1 {
+        font-size: 2em; /* Ajusta o tamanho do título em telas menores */
+    }
+
+    nav a {
+        margin: 0 10px; /* Reduz o espaçamento entre os links de navegação */
+    }
+
+    button {
+        padding: 6px 12px; /* Ajusta o padding dos botões */
+        font-size: 0.9em; /* Reduz o tamanho da fonte */
+    }
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Adicione uma família de fontes básica */
+    font-size: 16px;
+    color: rgb(50, 50, 50); /* Melhore a cor padrão para o texto */
+    line-height: 1.6; /* Aumente o espaçamento entre linhas para facilitar a leitura */
+}
+
+
 header {
     background-image: url('imagem/cabecalho.jpg'); /* Substitua pelo caminho correto da sua imagem */
     background-size: cover; /* Garante que a imagem cubra todo o espaço disponível */
@@ -33,10 +61,32 @@ nav a {
     display: inline-block;/* Mostra os link um na frente do outro */
     margin: 0 15px; /* Espaçamento horizontal entre os links */
     color: rgb(101, 81, 43);
+	text-decoration: none;
+    transition: color 0.3s ease; /* Animação suave ao passar o mouse */
+}
+nav a:hover {
+    color: rgb(150, 100, 50); /* Muda a cor ao passar o mouse */
 }
 
 button {
     color: white;
     background-color: rgb(101, 81, 43);
-    padding: 8px 15px; /* Aumenta o espaço dentro do botão */
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: rgb(7, 120, 18);
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form input[type="password"] {
+    padding: 10px;
+    border: 1px solid rgb(101, 81, 43);
+    border-radius: 5px;
+    width: 20%; /* Largura total do campo */
 }
