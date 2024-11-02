@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: rgb(253, 233, 197);
+    background-color: rgb(249,235,191);
     font-family: 'Roboto', sans-serif;
 }
 html, body, div, span, applet, object, iframe,
@@ -67,7 +67,7 @@ table {
 
 
 header {
-    background-image: url('imagem/cabecalho.jpg'); /* Substitua pelo caminho correto da sua imagem */
+   /* background-image: url('imagem/cabecalho.jpg'); /* Substitua pelo caminho correto da sua imagem */
     background-size: cover; /* Garante que a imagem cubra todo o espaço disponível */
     background-position: center; /* Centraliza a imagem */
     height: 25vh; /* Define a altura do cabeçalho para 20% da altura da tela */
@@ -76,15 +76,16 @@ header {
     /* justify-content: center; Centraliza o conteúdo horizontalmente */
     align-items: center; /* Centraliza o conteúdo verticalmente */
     text-align: center;
-
-
     justify-content: space-between;
     padding: 0 1em;
+	border-bottom: 2px solid #000; 
+}
+span-cursiva{
+	   font-family: 'Dancing Script', cursive;
 }
 
-
 header h1 {
-    color: rgb(7, 120, 18); /* Altera a cor do texto para branco, para se destacar */
+    color: rgb(39, 105, 50); /* Altera a cor do texto para branco, para se destacar */
     font-size: 2.5em; /* Aumenta o tamanho da fonte do título */
     background: none; /* Remove qualquer fundo aplicado ao texto */
     flex: 1;
@@ -93,13 +94,22 @@ header h1 {
     flex-direction: column;
 }
 
+ h2 {
+    color: maroon /* Altera a cor do texto para branco, para se destacar */
+    font-size: 1.5em; /* Aumenta o tamanho da fonte do título */
+    
+}
+
+
 header h1 span { 
-    color: rgb(102, 102, 255); 
+    color: maroon; 
     background: 0;
-    font-size: .5em;
+    font-size: .8em;
+	font-family: 'Dancing Script', cursive;
 }
 
 header .conten-login {
+	padding: 0 1em; /* Recuo nas laterais */
     display: flex;
     align-items: center;
     gap: 8px;
@@ -115,6 +125,7 @@ header .conten-login a {
 main{
     
     text-align: center; /* Centraliza o texto horizontalmente dentro do div */
+	
     
 }
 
@@ -136,11 +147,16 @@ button {
     flex-wrap: wrap;
     padding: 6em 0;
     gap: 1em;
+	
 }
 
 .product {
     text-align: center;       /* Centraliza o texto abaixo da imagem */
     margin: 10px;            /* Adiciona um espaço entre os produtos */
+	color: maroon; /* Altera a cor do texto para branco, para se d estacar */
+	font-size : 1.1em; /* Aumenta o tamanho da fonte do título */
+    
+    
 }
 
 .product img {
@@ -153,15 +169,14 @@ button {
 }
 
 footer {
-    position: absolute;
-    bottom: 1em;
-    width: 100%;
+    
     position: absolute;
     bottom: 1em;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end; /* Alinha o conteúdo à direita */
     gap: 1em;
+	padding: 0 2em; /* Recuo nas laterais */
 }
 
 footer a {
@@ -169,7 +184,9 @@ footer a {
 }
 
 footer a img {
-    width: 45px;
-    height: 45px;
+	    border-radius: 30px; /* Arredonda as bordas da imagem */
+    transition: transform 0.3s; /* Adiciona uma transição suave */
+    width: 25px;
+    height: 25px;
 }
 
