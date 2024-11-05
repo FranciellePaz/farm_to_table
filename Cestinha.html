@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style_cestinha.css">
     <title>Cestinha</title>
+	
+	<script>
+	
+	function deletaRow(index){
+ document.getElementById('mytable').deleteRow(index);
+}
+	</script>
 </head>
 
 <body>
@@ -27,12 +34,42 @@
         </nav>
 
         <section>
-            <!--imagem da cestinha-->
-            <p>Olá</p>
-            <p>Sua cestinha está vazia</p>
-            <p>Você ainda não escolheu nenhum produto</p>
-            <p>Vá para página todos os produtos e escolha os seus favoritos</p>
-            <br>
+        <table id="mytable">
+    <thead>
+        <tr>
+            <th>Produto</th>
+            <th>Descrição</th>
+            <th>Excluir</th>
+        </tr>
+    </thead>
+    <tbody">
+        <tr id="linha_1" >
+            <td><img src="imagem/alface_crespa_roxa.webp" alt="Alface Crespa Roxa" width=50 height=50></td>
+            <td>Alface Crespa Roxa</td>
+            <td> <a href="#"> <img src="imagem/excluir.png"  width="30" height="30"  onclick="deletaRow('1')"> </a> </td>
+        </tr>
+        <tr>
+            <td><img src="imagem/alface_romana.webp" alt="Alface Romana" width=50 height=50></td>
+            <td>Alface Romana</td>
+            <td><a href="#"> <img src="imagem/excluir.png"  width="30" height="30"  onclick="deletaRow('2')"> </a> </td>
+        </tr>
+        <tr>
+            <td><img src="imagem/alface_crespa.webp" alt="Alface Crespa" width=50 height=50></td>
+            <td>Alface Crespa</td>
+            <td><a href="#"> <img src="imagem/excluir.png"  width="30" height="30"  onclick="deletaRow('3')"> </a> </td>
+        </tr>
+        <tr>
+            <td><img src="imagem/azedinha.webp" alt="Azedinha" width=50 height=50></td>
+            <td>Azedinha</td>
+            <td><a href="#"> <img src="imagem/excluir.png"  width="30" height="30"  onclick="deletaRow('4')"> </a> </td>
+        </tr>
+        <tr>
+            <td> <img src="imagem/acelga.webp" alt="Acelga" width=50 height=50></td>
+            <td>Acelga</td>
+            <td> <a href="#"> <img src="imagem/excluir.png"  width="30" height="30"  onclick="deletaRow('5')"> </a></td>
+        </tr>
+    </tbody>
+</table>
         </section>
 
    <footer>
