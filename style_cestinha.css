@@ -192,3 +192,25 @@ footer a img {
     width: 25px;
     height: 25px;
 }
+   table {
+            width: 80%; /* Define a largura da tabela, pode ser ajustada */
+            margin: 0 auto; /* Centraliza a tabela */
+            border-collapse: collapse;
+            margin-top: 20px;
+			background-color: #FFFFFF;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
