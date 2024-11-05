@@ -7,7 +7,24 @@
     <title>Farm to table</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+<script>
+function  mensagem(item){
+if (item=='colheita' ) {
+   document.getElementById("texto_dinamico").innerHTML="Produtos da colheita do mês";
+  }
+else if (item=='produto' ) {
+   document.getElementById("texto_dinamico").innerHTML="Todos os produtos da nossa loja";
+}
+else if (item=='receita' ) {
+   document.getElementById("texto_dinamico").innerHTML="As melhores receitas estão aqui";
+}
+}
 
+function  limpaMensagem(){
+
+   document.getElementById("texto_dinamico").innerHTML="";
+}
+</script>
 
 </head>
 <body>
@@ -27,21 +44,24 @@
         
     <main>
 	<div class="borda">
+	<div id="texto_dinamico">
+	
+	</div>
         <section class="product-section">
             <div class="product">
-                <a href="Colheita_do_mês.html">
+                <a href="Colheita_do_mês.html" onmouseout="limpaMensagem()" onmouseover="mensagem('colheita')">
                     <img src="imagem/imagem1.jpg" alt="Colheita do Mês" width="250" height="200">
                 </a>
                 <h2>Colheita do Mês</h2>
             </div>
             <div class="product">
-                <a href="todos_produtos.html">
+                <a href="todos_produtos.html" onmouseout="limpaMensagem()" onmouseover="mensagem('produto')">
                     <img src="imagem/imagem2.jpg" alt="Todos os Produtos" width="250" height="200">
                 </a>
                 <h2>Todos os Produtos</h2>
             </div>
             <div class="product">
-                <a href="receitas.html">
+                <a href="receitas.html" onmouseout="limpaMensagem()" onmouseover="mensagem('receita')" >
                     <img src="imagem/imagem3.jpg" alt="Receita" width="250" height="200">
                 </a>
                 <h2>Receitas</h2>
