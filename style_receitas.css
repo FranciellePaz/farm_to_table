@@ -213,7 +213,6 @@ button {
 }
 
 footer {
-    
     position: absolute;
     bottom: 1em;
     width: 100%;
@@ -224,7 +223,7 @@ footer {
 }
 
 footer a img {
-	    border-radius: 30px; /* Arredonda as bordas da imagem */
+	border-radius: 30px; /* Arredonda as bordas da imagem */
     transition: transform 0.3s; /* Adiciona uma transição suave */
     width: 25px;
     height: 25px;
