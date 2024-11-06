@@ -143,7 +143,11 @@ section {
 
 div{
     display: inline-block;
-    width: 30vw; 
+    /* width: 30vw;  */
+    width: auto;
+    justify-content: center; /* Centraliza os filhos horizontalmente */
+    align-items: center; /* Alinha os filhos verticalmente, se necessário */
+    gap: 20px; /* Espaço entre os itens */
 }
 
 div img{
@@ -165,7 +169,7 @@ button {
 
 .modal{
     display: none; 
-    position: absolute; 
+    position: fixed; 
     z-index: 1; 
     left: 0;
     top: 0;
@@ -185,9 +189,14 @@ button {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    max-width: 600px; /* Limite a largura máxima do modal */
+    border-radius: 8px; /* Adicione bordas arredondadas, se desejar */
 }
 
 .close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
     color: #aaa;
     float: right;
     font-size: 28px;
