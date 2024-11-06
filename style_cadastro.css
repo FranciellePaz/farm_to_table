@@ -203,8 +203,7 @@ section p {
     margin-bottom: 20px;
 }
 footer {
-    
-    position: absolute;
+
     bottom: 1em;
     width: 100%;
     display: flex;
