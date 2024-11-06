@@ -2,24 +2,120 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: rgb(253, 233, 197);
+    background-color: rgb(249,235,191);
+    font-family: 'Roboto', sans-serif;
 }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+  }
+  
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* FIM DO RESET CSS */
+
 header {
-    background-image: url('imagem/fundo_receitas.jpg'); /* Substitua pelo caminho correto da sua imagem */
+    /* background-image: url('imagem/fundo_receitas.jpg'); /* Substitua pelo caminho correto da sua imagem */
     background-size: cover; /* Garante que a imagem cubra todo o espaço disponível */
     background-position: center; /* Centraliza a imagem */
-    height: 25vh; /* Define a altura do cabeçalho para 20% da altura da tela */
+    height: 25vh; /* Define a altura do cabeçalho para 25% da altura da tela */
     width: 100vw; /* Define a largura para 100% da tela */
     display: flex;
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    /* justify-content: center; /* Centraliza o conteúdo horizontalmente */
     align-items: center; /* Centraliza o conteúdo verticalmente */
     text-align: center;
+    justify-content: space-between;
+    padding: 0 1em;
+	border-bottom: 2px solid #000; 
+}
+
+span-cursiva {
+    font-family: 'Dancing Script', cursive;
 }
 
 header h1 {
-    color :maroon;
-    font-size: 2.5em; /* Aumenta o tamanho da fonte do título */
+    color: rgb(39, 105, 50); /* Altera a cor do texto para branco, para se destacar */
+    font-size: 2.0em; /* Aumenta o tamanho da fonte do título */
     background: none; /* Remove qualquer fundo aplicado ao texto */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h2 {
+    color: maroon; /* Altera a cor do texto para branco, para se destacar */
+    font-size: 1.0em; /* Aumenta o tamanho da fonte do título */   
+}
+
+header h1 span { 
+    color: maroon; 
+    background: 0;
+    font-size: .8em;
+	font-family: 'Dancing Script', cursive;
+}
+
+header .conten-login {
+	padding: 0 1em; /* Recuo nas laterais */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: 0;
+}
+
+header .conten-login a {
+    text-decoration: none;
+    background: 0;
+    font-weight: 600;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Adicione uma família de fontes básica */
+    font-size: 16px;
+    color: rgb(50, 50, 50); /* Melhore a cor padrão para o texto */
+    line-height: 1.6; /* Aumente o espaçamento entre linhas para facilitar a leitura */
 }
 
 main{  
@@ -30,6 +126,19 @@ nav a {
     display: inline-block;/* Mostra os link um na frente do outro */
     margin: 0 15px; /* Espaçamento horizontal entre os links */
     color: rgb(101, 81, 43);
+    text-decoration: none;
+    transition: color 0.3s ease; /* Animação suave ao passar o mouse */
+}
+
+nav a:hover {
+    color: rgb(150, 100, 50); /* Muda a cor ao passar o mouse */
+}
+
+section {
+    display: flex; /* Use flexbox para alinhar os filhos */
+    justify-content: center; /* Centraliza os filhos horizontalmente */
+    align-items: center; /* Alinha os filhos verticalmente, se necessário */
+    gap: 20px; /* Espaço entre os itens */
 }
 
 div{
@@ -102,3 +211,23 @@ button {
     opacity: 1;
     pointer-events: auto;
 }
+
+footer {
+    
+    position: absolute;
+    bottom: 1em;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Alinha o conteúdo à direita */
+    gap: 1em;
+	padding: 0 2em; /* Recuo nas laterais */
+}
+
+footer a img {
+	    border-radius: 30px; /* Arredonda as bordas da imagem */
+    transition: transform 0.3s; /* Adiciona uma transição suave */
+    width: 25px;
+    height: 25px;
+}
+
+

@@ -95,7 +95,7 @@ header h1 {
 }
 
  h2 {
-    color: maroon /* Altera a cor do texto para branco, para se destacar */
+    color: maroon; /* Altera a cor do texto para branco, para se destacar */
     font-size: 1.5em; /* Aumenta o tamanho da fonte do título */
     
 }
