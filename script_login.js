@@ -37,6 +37,8 @@ emailInput.addEventListener("change", function(e){
     }
 })
 
+/* Validação senha */
+
 let senhaInput = document.getElementById("senha");
 let senhaLabel = document.querySelector('label[for="senha"]');
 let senhaHelper = document.getElementById("senha-helper");

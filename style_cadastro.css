@@ -162,6 +162,36 @@ form label {
     margin-bottom: 5px;
 }
 
+
+.required-popup::after {
+    content: "Campo obrigatório";
+    position: absolute;
+    top: 100%; /* Posiciona logo abaixo do campo */
+    left: 0;
+    color: #dfdfdf;
+    font-size: .8rem;
+    padding: 0.2rem;
+    background-color: #202020;
+    border-radius: 3px;
+    white-space: nowrap;
+}
+
+input.error {
+    border: solid 2px #992020;
+    background-color: #CCBBBB;
+    color: #662020;
+}
+
+input.correct {
+    border: solid 2px #206620;
+    background-color: #BBCCBB;
+    color: #206620;
+}
+
+.visible {
+    display: block;
+}
+
 form input[type="text"],
 form input[type="email"],
 form input[type="date"],
@@ -201,8 +231,8 @@ section h3 {
 section p {
     margin-bottom: 20px;
 }
-footer {
 
+footer {
     bottom: 1em;
     width: 100%;
     display: flex;
@@ -212,8 +242,30 @@ footer {
 }
 
 footer a img {
-	    border-radius: 30px; /* Arredonda as bordas da imagem */
+	border-radius: 30px; /* Arredonda as bordas da imagem */
     transition: transform 0.3s; /* Adiciona uma transição suave */
     width: 25px;
     height: 25px;
+}
+
+.helper-text {
+    color: red;
+    font-size: 0.9em;
+    display: none; /* Esconde o texto por padrão */
+}
+
+.helper-text.visible {
+    display: block; /* Mostra o texto quando tem a classe 'visible' */
+}
+
+input.error {
+    border: solid 2px #992020;
+    background-color: #CCBBBB;
+    color: #662020;
+}
+
+input.correct {
+    border: solid 2px #206620;
+    background-color: #BBCCBB;
+    color: #206620;
 }
