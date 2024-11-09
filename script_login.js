@@ -23,14 +23,26 @@ mostrarPopup (emailInput, emailLabel)
 
 emailInput.addEventListener("change", function(e){
     let valor = e.target.value
-    if (valor.includes("@") && valor.includes(".com")){
+     // Verificar se o e-mail possui "@" e termina com um domínio válido como ".com"
+    // if (valor.includes("@") && valor.includes(".com")){
+    //     emailInput.classList.remove("error");
+    //     emailInput.classList.add("correct");
+    //     emailHelper.classList.remove("visible");
+    // }else{
+    //     emailInput.classList.remove("correct");
+    //     emailInput.classList.add("error");
+    //     emailHelper.innerText = "O email está invalido";
+    //     emailHelper.classList.add("visible");
+    // }
+    let emailRegex = /^[^\s@]+@[^\s@]+\.com$/;
+    if (emailRegex.test(valor)) {
         emailInput.classList.remove("error");
         emailInput.classList.add("correct");
         emailHelper.classList.remove("visible");
-    }else{
+    } else {
         emailInput.classList.remove("correct");
         emailInput.classList.add("error");
-        emailHelper.innerText = "O email está invalido";
+        emailHelper.innerText = "O e-mail está inválido.";
         emailHelper.classList.add("visible");
     }
 })
@@ -39,19 +51,35 @@ let senhaInput = document.getElementById("senha");
 let senhaLabel = document.querySelector('label[for="senha"]');
 let senhaHelper = document.getElementById("senha-helper");
 
-mostrarPopup (passwordInput, passwordLabel)
+mostrarPopup (senhaInput, senhaLabel)
 
 /* Validar valor do input */
-passwordInput.addEventListener("change", function(e){
+senhaInput.addEventListener("change", function(e){
     let valor = e.target.value
-    if (valor.lenght < 6){
-        passwordInput.classList.remove("correct");
-        passwordInput.classList.add("error");
-        passwordHelper.innerText = "A senha deve ter pelo menos 6 digitos";
-        passwordHelper.classList.add("visible");
+    if (valor.length < 6){
+        senhaInput.classList.remove("correct");
+        senhaInput.classList.add("error");
+        senhaHelper.innerText = "A senha deve ter pelo menos 6 digitos";
+        senhaHelper.classList.add("visible");
     }else{
-        passwordInput.classList.remove("error");
-        passwordInput.classList.add("correct");
-        passwordHelper.classList.remove("visible");
+        senhaInput.classList.remove("error");
+        senhaInput.classList.add("correct");
+        senhaHelper.classList.remove("visible");
     }
 })
+
+// Verificação de campo vazio para senha e e-mail
+document.querySelector("form").addEventListener("submit", function(e) {
+    if (emailInput.value.trim() === "") {
+        emailHelper.innerText = "O e-mail é obrigatório";
+        emailHelper.classList.add("visible");
+        emailInput.classList.add("error");
+        e.preventDefault();
+    }
+    if (senhaInput.value.trim() === "") {
+        senhaHelper.innerText = "A senha é obrigatória";
+        senhaHelper.classList.add("visible");
+        senhaInput.classList.add("error");
+        e.preventDefault();
+    }
+});
