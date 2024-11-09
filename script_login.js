@@ -24,16 +24,6 @@ mostrarPopup (emailInput, emailLabel)
 emailInput.addEventListener("change", function(e){
     let valor = e.target.value
      // Verificar se o e-mail possui "@" e termina com um domínio válido como ".com"
-    // if (valor.includes("@") && valor.includes(".com")){
-    //     emailInput.classList.remove("error");
-    //     emailInput.classList.add("correct");
-    //     emailHelper.classList.remove("visible");
-    // }else{
-    //     emailInput.classList.remove("correct");
-    //     emailInput.classList.add("error");
-    //     emailHelper.innerText = "O email está invalido";
-    //     emailHelper.classList.add("visible");
-    // }
     let emailRegex = /^[^\s@]+@[^\s@]+\.com$/;
     if (emailRegex.test(valor)) {
         emailInput.classList.remove("error");

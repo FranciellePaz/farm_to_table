@@ -64,12 +64,12 @@ header {
     height: 25vh; /* Define a altura do cabeçalho para 25% da altura da tela */
     width: 100vw; /* Define a largura para 100% da tela */
     display: flex;
-    /* justify-content: center; /* Centraliza o conteúdo horizontalmente */
     align-items: center; /* Centraliza o conteúdo verticalmente */
-    text-align: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Centraliza o conteúdo horizontalmente */
+    /* text-align: center; */
     padding: 0 1em;
 	border-bottom: 2px solid #000; 
+    position: relative;
 }
 
 span-cursiva {
@@ -81,9 +81,10 @@ header h1 {
     font-size: 2.0em; /* Aumenta o tamanho da fonte do título */
     background: none; /* Remove qualquer fundo aplicado ao texto */
     flex: 1;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    /* display: flex; */
+    /* justify-content: center;
+    flex-direction: column; */
+    text-align: center;
 }
 
 h2 {
@@ -99,17 +100,25 @@ header h1 span {
 }
 
 header .conten-login {
-	padding: 0 1em; /* Recuo nas laterais */
+	/* padding: 0 1em; Recuo nas laterais */
     display: flex;
+    flex-direction: row; /* Alinha os itens na horizontal */
     align-items: center;
-    gap: 8px;
-    background: 0;
+    gap: 10px;
+    /* background: 0; */
+    position: absolute;
+    right: 1em;
 }
 
 header .conten-login a {
     text-decoration: none;
     background: 0;
     font-weight: 600;
+}
+
+.conten-login a img {
+    width: 35px; /* Ajuste conforme necessário */
+    height: 35px; /* Ajuste conforme necessário */
 }
 
 body {
