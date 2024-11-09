@@ -7,6 +7,38 @@
     <script src="./script_cadastro.js" defer></script>
     <title>Cadastro</title>
 	
+	<script>
+	function validaFormulario(){
+	var mensagem="";
+	  if(document.getElementById("nome").value=="" || document.getElementById("nome").value==null ) {
+	     mensagem= mensagem + "<br> -Nome é um campo Obrigatório"; 
+		 
+	 }
+	 if(document.getElementById("cpf").value=="" || document.getElementById("cpf").value==null ) {
+	     mensagem= mensagem + "<br> -CPF é um campo Obrigatório";
+		 }
+     else if (isNaN(document.getElementById("cpf").value)) {
+	      mensagem= mensagem + "<br> -CPF deve ser apenas números";
+	 }
+     
+	if(document.getElementById("data_nascimento").value=="" || document.getElementById("data_nascimento").value==null ) {
+	     mensagem= mensagem + "<br> -Data nascimento é um campo Obrigatório";
+		 }
+		 
+	if(document.getElementById("email").value=="" || document.getElementById("email").value==null ) {
+	     mensagem= mensagem + "<br> -Email é um campo Obrigatório";
+		 }	 
+	if(document.getElementById("endereco").value=="" || document.getElementById("endereco").value==null ) {
+	     mensagem= mensagem + "<br> -Endereco é um campo Obrigatório";
+		 }	 
+
+if(document.getElementById("celular").value=="" || document.getElementById("celular").value==null ) {
+	     mensagem= mensagem + "<br> -Celular é um campo Obrigatório";
+		 }	 		 
+	   document.getElementById("texto_dinamico").innerHTML=mensagem;
+       return false;
+	}
+	</script>
 </head>
 
 <body>
@@ -31,7 +63,7 @@
 <div id="texto_dinamico" style="background-color: rgb(255,0,0)">
 
 </div>
-        <form  action="">
+        <form  onsubmit="return validaFormulario()">
             <div class="form-group">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome">

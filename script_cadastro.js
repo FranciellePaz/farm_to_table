@@ -1,21 +1,31 @@
+function mostrarPopup(input, label, helper) {
+    // Mostrar pop-up de campo obrigatório ao perder foco
+    input.addEventListener("blur", function () {
+        if (input.value.trim() === "") {
+            label.classList.add("required-popup");
+            helper.classList.add("visible");
+            input.classList.add("error");
+        } else {
+            label.classList.remove("required-popup");
+            helper.classList.remove("visible");
+            input.classList.remove("error");
+        }
+    });
+
+    // Remover a mensagem de erro enquanto o usuário digita
+    input.addEventListener("input", function () {
+        if (input.value.trim() !== "") {
+            helper.classList.remove("visible");
+            input.classList.remove("error");
+        }
+    });
+}
+
 /* Validação Nome */
 
 let nomeInput = document.getElementById("nome");
 let nomeLabel = document.querySelector('label[for="nome"]');
 let nomeHelper = document.getElementById("nome-helper");
-
-function mostrarPopup(input, label) {
-    /* Mostrar pop-up de campo obrigatório */
-
-    input.addEventListener("focus", function(){
-    label.classList.add("required-popup")
-    })
-
-    /* Ocultar pop-up de campo obrigatório */
-    input.addEventListener("blur", function(){
-    label.classList.remove("required-popup")
-    })
-}
 
 mostrarPopup (nomeInput, nomeLabel)
 
@@ -25,20 +35,7 @@ let cpfInput = document.getElementById("cpf");
 let cpfLabel = document.querySelector('label[for="cpf"]');
 let cpfHelper = document.getElementById("cpf-helper");
 
-function mostrarPopup(input, label) {
-    /* Mostrar pop-up de campo obrigatório */
-
-    input.addEventListener("focus", function(){
-    label.classList.add("required-popup")
-    })
-
-    /* Ocultar pop-up de campo obrigatório */
-    input.addEventListener("blur", function(){
-    label.classList.remove("required-popup")
-    })
-}
-
-mostrarPopup (nomeInput, nomeLabel)
+mostrarPopup (cpfInput, cpfLabel)
 
 /* Validação data nascimento */
 
@@ -46,20 +43,7 @@ let data_nascimentoInput = document.getElementById("data_nascimento");
 let data_nascimentoLabel = document.querySelector('label[for="data_nascimento"]');
 let data_nascimentoHelper = document.getElementById("data_nascimento-helper");
 
-function mostrarPopup(input, label) {
-    /* Mostrar pop-up de campo obrigatório */
-
-    input.addEventListener("focus", function(){
-    label.classList.add("required-popup")
-    })
-
-    /* Ocultar pop-up de campo obrigatório */
-    input.addEventListener("blur", function(){
-    label.classList.remove("required-popup")
-    })
-}
-
-mostrarPopup (nomeInput, nomeLabel)
+mostrarPopup (data_nascimentoInput, data_nascimentoLabel)
 
 /* Validação email */
 
@@ -67,39 +51,7 @@ let emailInput = document.getElementById("email");
 let emailLabel = document.querySelector('label[for="email"]');
 let emailHelper = document.getElementById("email-helper");
 
-function mostrarPopup(input, label) {
-    /* Mostrar pop-up de campo obrigatório */
-
-    input.addEventListener("focus", function(){
-    label.classList.add("required-popup")
-    })
-
-    /* Ocultar pop-up de campo obrigatório */
-    input.addEventListener("blur", function(){
-    label.classList.remove("required-popup")
-    })
-}
-
-mostrarPopup (nomeInput, nomeLabel)
-
-/* Validar valor do input */
-
-emailInput.addEventListener("change", function(e){
-    let valor = e.target.value
-     // Verificar se o e-mail possui "@" e termina com um domínio válido como ".com"
-    let emailRegex = /^[^\s@]+@[^\s@]+\.com$/;
-    if (emailRegex.test(valor)) {
-        emailInput.classList.remove("error");
-        emailInput.classList.add("correct");
-        emailHelper.classList.remove("visible");
-    } else {
-        emailInput.classList.remove("correct");
-        emailInput.classList.add("error");
-        emailHelper.innerText = "O e-mail está inválido.";
-        emailHelper.classList.add("visible");
-    }
-})
-
+mostrarPopup (emailInput, emailLabel)
 
 /* Validação endereço */
 
@@ -107,69 +59,61 @@ let enderecoInput = document.getElementById("endereco");
 let enderecoLabel = document.querySelector('label[for="endereco"]');
 let enderecoHelper = document.getElementById("endereco-helper");
 
-function mostrarPopup(input, label) {
-    /* Mostrar pop-up de campo obrigatório */
+mostrarPopup (enderecoInput, enderecoLabel)
 
-    input.addEventListener("focus", function(){
-    label.classList.add("required-popup")
-    })
+/* Validação celular */
 
-    /* Ocultar pop-up de campo obrigatório */
-    input.addEventListener("blur", function(){
-    label.classList.remove("required-popup")
-    })
+let celularInput = document.getElementById("celular");
+let celularLabel = document.querySelector('label[for="celular"]');
+let celularHelper = document.getElementById("celular-helper");
+
+mostrarPopup (celularInput, celularLabel)
+
+// Verificação do campo nome
+if (nomeInput.value.trim() === "") {
+    nomeHelper.innerText = "O nome é obrigatório";
+    nomeHelper.classList.add("visible");
+    nomeInput.classList.add("error");
+    e.preventDefault();
 }
 
-mostrarPopup (nomeInput, nomeLabel)
-
-/* Validação senha */
-
-let senhaInput = document.getElementById("senha");
-let senhaLabel = document.querySelector('label[for="senha"]');
-let senhaHelper = document.getElementById("senha-helper");
-
-function mostrarPopup(input, label) {
-    /* Mostrar pop-up de campo obrigatório */
-
-    input.addEventListener("focus", function(){
-    label.classList.add("required-popup")
-    })
-
-    /* Ocultar pop-up de campo obrigatório */
-    input.addEventListener("blur", function(){
-    label.classList.remove("required-popup")
-    })
+// Verificação do campo CPF
+if (cpfInput.value.trim() === "") {
+    cpfHelper.innerText = "O CPF é obrigatório";
+    cpfHelper.classList.add("visible");
+    cpfInput.classList.add("error");
+    e.preventDefault();
 }
 
-mostrarPopup (nomeInput, nomeLabel)
+// Verificação da data de nascimento
+if (dataNascimentoInput.value.trim() === "") {
+    dataNascimentoHelper.innerText = "A data de nascimento é obrigatória";
+    dataNascimentoHelper.classList.add("visible");
+    dataNascimentoInput.classList.add("error");
+    e.preventDefault();
+}
 
-/* Validar valor do input */
-senhaInput.addEventListener("change", function(e){
-    let valor = e.target.value
-    if (valor.length < 6){
-        senhaInput.classList.remove("correct");
-        senhaInput.classList.add("error");
-        senhaHelper.innerText = "A senha deve ter pelo menos 6 digitos";
-        senhaHelper.classList.add("visible");
-    }else{
-        senhaInput.classList.remove("error");
-        senhaInput.classList.add("correct");
-        senhaHelper.classList.remove("visible");
-    }
-})
+// Verificação do campo email
+if (emailInput.value.trim() === "") {
+    emailHelper.innerText = "O e-mail é obrigatório";
+    emailHelper.classList.add("visible");
+    emailInput.classList.add("error");
+    e.preventDefault();
+}
 
-// Verificação de campo vazio para senha e e-mail
-document.querySelector("form").addEventListener("submit", function(e) {
-    if (emailInput.value.trim() === "") {
-        emailHelper.innerText = "O e-mail é obrigatório";
-        emailHelper.classList.add("visible");
-        emailInput.classList.add("error");
-        e.preventDefault();
-    }
-    if (senhaInput.value.trim() === "") {
-        senhaHelper.innerText = "A senha é obrigatória";
-        senhaHelper.classList.add("visible");
-        senhaInput.classList.add("error");
-        e.preventDefault();
-    }
-});
+// Verificação do campo endereço
+if (enderecoInput.value.trim() === "") {
+    enderecoHelper.innerText = "O endereço é obrigatório";
+    enderecoHelper.classList.add("visible");
+    enderecoInput.classList.add("error");
+    e.preventDefault();
+}
+
+// Verificação do campo celular
+if (celularInput.value.trim() === "") {
+    celularHelper.innerText = "O celular é obrigatório";
+    celularHelper.classList.add("visible");
+    celularInput.classList.add("error");
+    e.preventDefault();
+}
+
