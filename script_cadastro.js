@@ -83,3 +83,14 @@ if (mostrarPopup (celularInput, celularLabel,celularHelper)==false) {
 return retorno;
 
 }
+
+function remove(nome){
+let input = document.getElementById(nome);
+let label = document.querySelector('label[for="'+nome+'"]');
+let helper = document.getElementById(nome+ '-helper');
+
+    label.classList.remove("required-popup");
+    helper.classList.remove("visible");
+    input.classList.remove("error");
+
+}
