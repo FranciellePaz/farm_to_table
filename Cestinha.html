@@ -9,7 +9,8 @@
 	<script>
 	
 	function deletaRow(index){
- document.getElementById('mytable').deleteRow(index);
+        alert(index.parentNode.rowIndex);
+       document.getElementById('mytable').deleteRow(index.parentNode.rowIndex);
 }
 	</script>
 </head>
@@ -43,30 +44,30 @@
         </tr>
     </thead>
     <tbody">
-        <tr id="linha_1" >
+        <tr id="linha_1"  >
             <td><img src="imagem/alface_crespa_roxa.webp" alt="Alface Crespa Roxa" width=50 height=50></td>
             <td>Alface Crespa Roxa</td>
-            <td> <a href="#"> <img src="imagem/excluir.png"  width="30" height="30"  onclick="deletaRow('1')"> </a> </td>
+            <td onclick="deletaRow(this)"> <a href="#"> <img src="imagem/excluir.png"  width="30" height="30"  > </a> </td>
         </tr>
         <tr>
             <td><img src="imagem/alface_romana.webp" alt="Alface Romana" width=50 height=50></td>
             <td>Alface Romana</td>
-            <td><a href="#"> <img src="imagem/excluir.png"  width="30" height="30"  onclick="deletaRow('2')"> </a> </td>
+            <td onclick="deletaRow(this)"><a href="#"> <img src="imagem/excluir.png"  width="30" height="30" > </a> </td>
         </tr>
         <tr>
             <td><img src="imagem/alface_crespa.webp" alt="Alface Crespa" width=50 height=50></td>
             <td>Alface Crespa</td>
-            <td><a href="#"> <img src="imagem/excluir.png"  width="30" height="30"  onclick="deletaRow('3')"> </a> </td>
+            <td onclick="deletaRow(this)"><a href="#"> <img src="imagem/excluir.png"  width="30" height="30" > </a> </td>
         </tr>
         <tr>
             <td><img src="imagem/azedinha.webp" alt="Azedinha" width=50 height=50></td>
             <td>Azedinha</td>
-            <td><a href="#"> <img src="imagem/excluir.png"  width="30" height="30"  onclick="deletaRow('4')"> </a> </td>
+            <td onclick="deletaRow(this)"><a href="#"> <img src="imagem/excluir.png"  width="30" height="30" > </a> </td>
         </tr>
         <tr>
             <td> <img src="imagem/acelga.webp" alt="Acelga" width=50 height=50></td>
             <td>Acelga</td>
-            <td> <a href="#"> <img src="imagem/excluir.png"  width="30" height="30"  onclick="deletaRow('5')"> </a></td>
+            <td onclick="deletaRow(this)"> <a href="#"> <img src="imagem/excluir.png"  width="30" height="30"> </a></td>
         </tr>
     </tbody>
 </table>
